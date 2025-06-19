@@ -177,11 +177,11 @@ const VueJsIntegrations = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
         {cards.map((card, index) => (
           <div
             key={index}
-            className="border border-gray-200 rounded-2xl p-5 hover:shadow-lg transition-all duration-300 hover:border-[#7014F2]"
+            className="border border-gray-300 rounded-2xl p-5 hover:shadow-[inset_-2px_-2px_6px_1px_rgba(164,92,233,0.5)] transition-all duration-300 "
           >
             <div className="flex flex-col ">
                 <div className="w-[42px] h-[42px] rounded-lg bg-gray-200 mb-4 flex justify-center items-center">
