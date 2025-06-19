@@ -94,13 +94,6 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Brand Section */}
           <div className="lg:col-span-1 space-y-4">
-            {/* <div className="flex items-center space-x-2 group cursor-pointer">
-              <div className="relative">
-                <Star className="w-8 h-8 text-orange-500 fill-current transform transition-transform duration-300 group-hover:rotate-180" />
-                <div className="absolute inset-0 bg-orange-500 rounded-full opacity-20 scale-0 group-hover:scale-110 transition-transform duration-300"></div>
-              </div>
-              <span className="text-xl font-bold tracking-wide">NovaDash</span>
-            </div> */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="178"
