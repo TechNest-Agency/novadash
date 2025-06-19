@@ -65,30 +65,8 @@ const Applications = () => {
 
     return (
         <section className=" mx-auto bg-[#F7F6F9]">
-            <div className='container mx-auto px-4 py-12'>
-                <style jsx global>{`
-        @keyframes bounce-slow {
-          0%, 100% {
-            transform: translateY(0);
-          }
-          50% {
-            transform: translateY(-20px);
-          }
-        }
-        .animate-bounce-slow {
-          animation: bounce-slow 3s ease-in-out infinite;
-        }
-        .card-hover:hover {
-          transform: translateY(-8px);
-          transition: transform 0.3s ease;
-        }
-        .btn-hover:hover {
-          background-color: #7014F2;
-          color: white;
-          transition: all 0.3s ease;
-        }
-      `}</style>
-
+            <div className='container mx-auto py-12 w-[95%]'>
+         
                 <div className="text-center mb-12">
                     <h2 className="text-2xl md:text-3xl font-bold mb-4 w-full mx-auto">
                         Stunning <span className="text-[#7014F2]">Applications</span>
@@ -129,6 +107,30 @@ const Applications = () => {
                         </div>
                     ))}
                 </div>
+
+                       <style jsx global>{`
+        @keyframes bounce-slow {
+          0%, 100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-20px);
+          }
+        }
+        .animate-bounce-slow {
+          animation: bounce-slow 3s ease-in-out infinite;
+        }
+        .card-hover:hover {
+          transform: translateY(-8px);
+          transition: transform 0.3s ease;
+        }
+        .btn-hover:hover {
+          background-color: #7014F2;
+          color: white;
+          transition: all 0.3s ease;
+        }
+      `}</style>
+
             </div>
 
         </section>

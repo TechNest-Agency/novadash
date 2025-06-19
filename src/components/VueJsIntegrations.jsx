@@ -164,7 +164,7 @@ const VueJsIntegrations = () => {
 //   ];
 
   return (
-    <section className="container mx-auto px-8 py-12">
+    <section className="container mx-auto w-[95%] py-14">
       <div className="text-center mb-12">
         <h2 className="text-2xl md:text-3xl font-bold mb-4 w-full mx-auto">
           Vuejs <span className="text-[#7014F2]" >
@@ -192,10 +192,10 @@ const VueJsIntegrations = () => {
               />
                 </div>
            
-              <h3 className="text-base md:text-lg font-semibold text-black mb-3">
+              <h3 className="text-base md:text-lg font-semibold text-black min-h-12">
                 {card.title}
               </h3>
-              <p className="text-sm md:text-base text-[#8C8C8C]">{card.description}</p>
+              <p className="text-sm md:text-base text-[#8C8C8C] mt-2">{card.description}</p>
             </div>
           </div>
         ))}

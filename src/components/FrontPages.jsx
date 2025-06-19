@@ -43,8 +43,8 @@ const FrontPages = () => {
 ];
 
     return (
-        <section className=" mx-auto bg-[#F7F6F9]">
-            <div className='container mx-auto px-4 pt-6 pb-12'>
+        <section className="  bg-[#F7F6F9]">
+            <div className='container mx-auto pt-6 pb-12 w-[95%] '>
                 <style jsx global>{`
         @keyframes bounce-slow {
           0%, 100% {
