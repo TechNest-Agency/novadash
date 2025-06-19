@@ -66,7 +66,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <div className="mb-40 relative">
+    <div className="relative">
       <div className="bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50 flex  items-center justify-center p-4 sm:p-6 lg:p-8 ">
         <div className="max-w-7xl w-full grid lg:pt-14 grid-cols-1 lg:grid-cols-2  lg:gap-16 items-center justify-items-center">
           {/* Left Content */}
