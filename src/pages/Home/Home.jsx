@@ -9,10 +9,12 @@ import Experience from "./Experience";
 import GithubRepo from "./GithubRepo";
 import Review from "./Review";
 
+import HeroSection from "./components/HeroSection";
 
 const Home = () => {
   return (
     <div>
+      <HeroSection />
       {/* experience section */}
       <Experience />
 
@@ -20,26 +22,25 @@ const Home = () => {
       <VueJsIntegrations />
 
       {/* Applications Stunning */}
-      <Applications/>
-      
+      <Applications />
+
       {/* documentation */}
-      <Documentation/>
+      <Documentation />
 
       {/* UsefulPages */}
-      <Useful/>
+      <Useful />
 
       {/* Front Pages */}
-      <FrontPages/>
+      <FrontPages />
 
       {/* github */}
-      <GithubRepo/>
+      <GithubRepo />
       {/* review */}
-      <Review/>
+      <Review />
       {/* Pricing section */}
       <PricingSection />
       {/* faq*/}
       <FAQSection />
-      
     </div>
   );
 };
