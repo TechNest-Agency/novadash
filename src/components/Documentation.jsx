@@ -15,7 +15,7 @@ const Documentation = () => {
 
               
                 <div className="lg:w-2/3">
-                    <h2 className="text-2xl font-bold text-gray-800 mb-4">Documentation</h2>
+                    <h2 className="text-2xl md:text-3xl font-bold 800 mb-4">Documentation</h2>
                     <p className="text-gray-600 lg:w-[90%] mb-6 text-sm w-[95%] sm:w-[90%] ">
                         Documentation provides a basic understanding of how our template works and how you can tweak it, so we highly recommend you first read our guide and then start working on your project using our template.
                     </p>
