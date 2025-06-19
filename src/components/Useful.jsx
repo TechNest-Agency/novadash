@@ -14,39 +14,39 @@ const Useful = () => {
    const usefulPages = [
   {
     title: "Create Deal",
-    img: CreateDealImg, // Make sure to import this image
+    img: CreateDealImg, 
     demoUrl: "https://demo.vuexy.com/vuexy-admin-template/vuejs/demo-1/pages/create-deal"
   },
   {
     title: "User Profile",
-    img: UserProfileImg, // Import this image
+    img: UserProfileImg, 
     demoUrl: "https://demo.vuexy.com/vuexy-admin-template/vuejs/demo-1/pages/user-profile"
   },
   {
     title: "FAQ",
-    img: FAQImg, // Import this image
+    img: FAQImg, 
     demoUrl: "https://demo.vuexy.com/vuexy-admin-template/vuejs/demo-1/pages/faq"
   },
   {
     title: "Account Settings",
-    img: AccountSettingsImg, // Import this image
+    img: AccountSettingsImg, 
     demoUrl: "https://demo.vuexy.com/vuexy-admin-template/vuejs/demo-1/pages/account-settings"
   },
   {
     title: "Pricing",
-    img: PricingImg, // Import this image
+    img: PricingImg, 
     demoUrl: "https://demo.vuexy.com/vuexy-admin-template/vuejs/demo-1/pages/pricing"
   },
   {
     title: "Billing & Plans",
-    img: BillingPlansImg, // Import this image
+    img: BillingPlansImg, 
     demoUrl: "https://demo.vuexy.com/vuexy-admin-template/vuejs/demo-1/pages/billing-plans"
   }
 ];
 
     return (
-        <section className=" mx-auto bg-[#F7F6F9]">
-            <div className='container mx-auto px-4 py-12'>
+        <section className="  bg-[#F7F6F9]">
+            <div className='container mx-auto py-12 w-[95%]'>
                 <style jsx global>{`
         @keyframes bounce-slow {
           0%, 100% {

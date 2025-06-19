@@ -2,9 +2,9 @@ import documentation from '../assets/images/front-page-img/document.png';
 
 const Documentation = () => {
     return (
-        <div className="flex items-center justify-center">
-            <div className="w-full  bg-gradient-to-r from-white from-30% to-purple-100/40 to-70%  border rounded-lg p-6 flex flex-col lg:flex-row items-center text-center lg:text-left">
-                {/* Image Section - Fixed 350px dimensions for large screens */}
+        <div className="flex items-center justify-center w-full  bg-gradient-to-r from-white from-30% to-purple-100/40 to-70% ">
+            <div className=" p-6 flex flex-col lg:flex-row items-center text-center lg:text-left w-[95%] mx-auto">
+     
                 <div className="mb-6 lg:mb-0 lg:mr-6 lg:w-1/3 flex justify-center">
                     <img
                         src={documentation}
@@ -13,7 +13,7 @@ const Documentation = () => {
                     />
                 </div>
 
-                {/* Text and Button Section */}
+              
                 <div className="lg:w-2/3">
                     <h2 className="text-2xl font-bold text-gray-800 mb-4">Documentation</h2>
                     <p className="text-gray-600 lg:w-[90%] mb-6 text-sm w-[95%] sm:w-[90%] ">
