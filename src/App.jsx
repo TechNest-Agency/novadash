@@ -5,8 +5,7 @@ import Login from "./pages/Login/Login";
 const App = () => {
   return (
     <div>
-      {/* <Outlet /> */}
-      <Login />
+      <Outlet />
     </div>
   );
 };
