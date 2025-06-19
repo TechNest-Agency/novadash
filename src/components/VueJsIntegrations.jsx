@@ -166,12 +166,12 @@ const VueJsIntegrations = () => {
   return (
     <section className="container mx-auto px-8 py-12">
       <div className="text-center mb-12">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4 w-[95%] md:w-[90%] mx-auto">
+        <h2 className="text-2xl md:text-3xl font-bold mb-4 w-full mx-auto">
           Vuejs <span className="text-[#7014F2]" >
              Framework Integrations
           </span> and Features
         </h2>
-        <p className="text-[#8C8C8C] w-[90%] md:w-[60%] mx-auto">
+        <p className="text-[#8C8C8C] w-[95%] sm:w-[90%] md:w-[70%] lg:w-[60%] mx-auto">
           With best-in-class UI frameworks for respective technologies,
           you can <span className="text-gray-900">build your dream app with long-term support</span> and regular updates.
         </p>
@@ -181,7 +181,7 @@ const VueJsIntegrations = () => {
         {cards.map((card, index) => (
           <div
             key={index}
-            className="border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 hover:border-[#7014F2]"
+            className="border border-gray-200 rounded-2xl p-5 hover:shadow-lg transition-all duration-300 hover:border-[#7014F2]"
           >
             <div className="flex flex-col ">
                 <div className="w-[42px] h-[42px] rounded-lg bg-gray-200 mb-4 flex justify-center items-center">
@@ -192,7 +192,7 @@ const VueJsIntegrations = () => {
               />
                 </div>
            
-              <h3 className="text-base md:text-lg font-semibold text-black mb-2">
+              <h3 className="text-base md:text-lg font-semibold text-black mb-3">
                 {card.title}
               </h3>
               <p className="text-sm md:text-base text-[#8C8C8C]">{card.description}</p>

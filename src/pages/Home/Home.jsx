@@ -1,3 +1,4 @@
+import Applications from "../../components/Applications";
 import VueJsIntegrations from "../../components/VueJsIntegrations";
 import Experience from "./Experience";
 import GithubRepo from "./GithubRepo";
@@ -10,6 +11,9 @@ const Home = () => {
       <Experience />
       {/*  Vue js Framework Integrations and Features*/}
       <VueJsIntegrations />
+
+      {/* Applications Stunning */}
+      <Applications/>
       {/* github */}
       <GithubRepo/>
       {/* review */}
