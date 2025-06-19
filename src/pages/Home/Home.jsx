@@ -1,11 +1,14 @@
 import Applications from "../../components/Applications";
 import Documentation from "../../components/Documentation";
+import FAQSection from "../../components/FAQsection";
 import FrontPages from "../../components/FrontPages";
+import PricingSection from "../../components/PricingSection";
 import Useful from "../../components/Useful";
 import VueJsIntegrations from "../../components/VueJsIntegrations";
 import Experience from "./Experience";
 import GithubRepo from "./GithubRepo";
 import Review from "./Review";
+
 
 const Home = () => {
   return (
@@ -32,6 +35,11 @@ const Home = () => {
       <GithubRepo/>
       {/* review */}
       <Review/>
+      {/* Pricing section */}
+      <PricingSection />
+      {/* faq*/}
+      <FAQSection />
+      
     </div>
   );
 };
