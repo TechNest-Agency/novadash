@@ -1,16 +1,40 @@
 import React from 'react';
 import { FaQuoteLeft, FaStar } from 'react-icons/fa';
-import Slider from 'react-slick'; // Assuming you install react-slick: npm install react-slick slick-carousel
+import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+// Import local company logo files
+import squizLogo from '../../assets/images/Logos/1stone.png';
+import olemissLogo from '../../assets/images/Logos/secondone.png';
+import sensearenaLogo from '../../assets/images/Logos/3rdone.png';
+import umichLogo from '../../assets/images/Logos/4thone.png';
+import betterLogo from '../../assets/images/Logos/5thone.png';
+import setterLogo from '../../assets/images/Logos/6htone.png';
+// import gcacsLogo from '../../assets/images/Logos/1stone.png';
+// import tevodLogo from '../../assets/images/Logos/1stone.png';
+// import placeholderLogo from '../../assets/images/Logos/1stone.png';
+
 const Review = () => {
+  // User avatars remain as URLs
   const userImages = [
-    'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&h=100&q=80',
-    'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&h=100&q=80',
-    'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&h=100&q=80',
-    'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&h=100&q=80',
-    'https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&h=100&q=80',
+    'https://randomuser.me/api/portraits/women/44.jpg',
+    'https://randomuser.me/api/portraits/men/32.jpg',
+    'https://randomuser.me/api/portraits/men/75.jpg',
+    'https://randomuser.me/api/portraits/women/63.jpg',
+    'https://randomuser.me/api/portraits/men/55.jpg',
+  ];
+
+  // Company logos mapped to local imports
+  const companyLogos = [
+    { name: 'SQUIZ', logo: squizLogo },
+    { name: 'University of Mississippi', logo: olemissLogo },
+    { name: 'Sense Arena', logo: sensearenaLogo },
+    { name: 'University of Michigan', logo: umichLogo },
+    { name: 'Better. agency', logo: betterLogo },
+    { name: 'SETTER', logo: setterLogo },
+    // { name: 'GCACS', logo: gcacsLogo },
+    // { name: 'Tevod', logo: tevodLogo }
   ];
 
   const reviews = [
@@ -49,16 +73,37 @@ const Review = () => {
       title: 'Better. agency',
       img: userImages[4],
     },
+    {
+      rating: 'Well Done!',
+      text: 'The design kit was both powerful and easy to implement. We appreciated the seamless integration.',
+      name: 'Tina Setters',
+      title: 'SETTER',
+      img: userImages[0],
+    },
+    {
+      rating: 'Great Work!',
+      text: 'The UI components were intuitive and well-structured, making our workflow efficient.',
+      name: 'Gina Cacs',
+      title: 'GCACS',
+      img: userImages[1],
+    },
+    {
+      rating: 'Excellent Design!',
+      text: 'The kit provided a smooth and cohesive user experience with minimal effort.',
+      name: 'Tom Tevod',
+      title: 'Tevod',
+      img: userImages[2],
+    },
   ];
 
   const sliderSettings = {
-    dots: true, // Enable dots for pagination
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true, // Auto-slide
-    autoplaySpeed: 3000, // 3 seconds per slide
+    autoplay: true,
+    autoplaySpeed: 3000,
     cssEase: 'linear',
     responsive: [
       {
@@ -83,14 +128,37 @@ const Review = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 bg-gray-50 min-h-screen">
-      {/* Header Section */}
+      {/* Header Section with Logos */}
       <div className="text-center mb-8 sm:mb-12">
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-3 sm:mb-4">
           Real <span className="text-purple-500">Customers </span>Reviews
         </h1>
-        <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-full sm:max-w-xl md:max-w-2xl mx-auto">
+        <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-full sm:max-w-xl md:max-w-2xl mx-auto mb-6">
           See what our customers have to say about their experience with our products.
         </p>
+        <div className="flex flex-wrap justify-center gap-6 mb-8">
+  {companyLogos.map((company, index) => (
+    <div 
+      key={index}
+      className="flex flex-col items-center group transition-all duration-300 hover:scale-105"
+    >
+      <div className="bg-white p-4 rounded-lg  hover:shadow-lg transition-shadow">
+        <img
+          src={company.logo}
+          alt={`${company.name} logo`}
+          className="h-24 w-24 sm:h-32 sm:w-32 object-contain"
+          onError={(e) => {
+            // e.currentTarget.src = placeholderLogo;
+            e.currentTarget.alt = `${company.name} logo placeholder`;
+          }}
+        />
+      </div>
+      <span className="mt-2 text-sm font-medium text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity">
+        {company.name}
+      </span>
+    </div>
+  ))}
+</div>
       </div>
 
       {/* Divider */}
@@ -120,6 +188,9 @@ const Review = () => {
                 src={review.img}
                 alt={review.name}
                 className="w-8 h-8 sm:w-10 sm:h-10 rounded-full mr-3 sm:mr-4 object-cover"
+                onError={(e) => {
+                  e.currentTarget.src = 'https://via.placeholder.com/100x100?text=User';
+                }}
               />
               <div className="text-left">
                 <h4 className="font-medium text-gray-800 text-sm sm:text-base">{review.name}</h4>
@@ -159,6 +230,9 @@ const Review = () => {
                       src={review.img}
                       alt={review.name}
                       className="w-10 h-10 sm:w-12 sm:h-12 rounded-full mr-3 sm:mr-4 object-cover"
+                      onError={(e) => {
+                        e.currentTarget.src = 'https://via.placeholder.com/100x100?text=User';
+                      }}
                     />
                     <div className="text-left">
                       <h4 className="font-medium text-gray-800 text-sm sm:text-base">
@@ -179,15 +253,15 @@ const Review = () => {
       {/* Custom CSS for invisible pagination dots */}
       <style jsx global>{`
         .slick-dots {
-          bottom: -25px; /* Move dots below the slider */
+          bottom: -25px;
         }
         .slick-dots li button:before {
-          color: #9b59b6; /* Purple color for active dot */
-          opacity: 0.5; /* Make dots less prominent */
-          font-size: 10px; /* Smaller dots */
+          color: #9b59b6;
+          opacity: 0.5;
+          font-size: 10px;
         }
         .slick-dots li.slick-active button:before {
-          opacity: 1; /* Full opacity for active dot */
+          opacity: 1;
         }
         .line-clamp-4 {
           display: -webkit-box;
