@@ -1,6 +1,7 @@
 import Applications from "../../components/Applications";
 import Documentation from "../../components/Documentation";
 import FrontPages from "../../components/FrontPages";
+import PredefinedLayout from "../../components/PredefinedLayout";
 import PricingSection from "../../components/PricingSection";
 import FAQSection from "../../components/FAQSection";
 import Useful from "../../components/Useful";
@@ -15,8 +16,13 @@ import AdvancedCards from "./components/AdvancedCards";
 
 const Home = () => {
   return (
-    <div>
+    <div className="">
+      {/* <div className="mx-auto container"> */}
       <HeroSection />
+
+      {/* pre-defined Layout */}
+      <PredefinedLayout />
+
       {/* experience section */}
       <Experience />
 
