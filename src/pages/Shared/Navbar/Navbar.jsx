@@ -138,7 +138,7 @@ const Navbar = () => {
           {/* CTA Button */}
           <div className="hidden lg:block">
             <button className="bg-gradient-to-r from-[#7014F2] flex gap-1 items-center to-[#7014F2] text-white px-4 py-2.5 rounded-md font-normal  hover:from-purple-700 hover:to-pink-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-purple-500/25">
-              Buy Vuexy{" "}
+              Buy NovaDash{" "}
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
