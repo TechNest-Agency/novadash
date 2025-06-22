@@ -5,7 +5,7 @@ import Footer from "./pages/Shared/Footer/Footer";
 
 const App = () => {
   return (
-    <div className="font-lexend flex flex-col min-h-screen">
+    <div className="font-lexend flex flex-col w-full min-h-screen ">
       <Navbar />
       <main className="flex-grow ">
         <Outlet />

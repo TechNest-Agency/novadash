@@ -16,12 +16,12 @@ import AdvancedCards from "./components/AdvancedCards";
 
 const Home = () => {
   return (
-    <div>
+    <div className="">
+      {/* <div className="mx-auto container"> */}
       <HeroSection />
 
       {/* pre-defined Layout */}
-      <PredefinedLayout/>
-
+      <PredefinedLayout />
 
       {/* experience section */}
       <Experience />
