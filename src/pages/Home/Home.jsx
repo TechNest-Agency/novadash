@@ -2,6 +2,7 @@ import Applications from "../../components/Applications";
 import Documentation from "../../components/Documentation";
 import FAQSection from "../../components/FAQsection";
 import FrontPages from "../../components/FrontPages";
+import PredefinedLayout from "../../components/PredefinedLayout";
 import PricingSection from "../../components/PricingSection";
 import Useful from "../../components/Useful";
 import VueJsIntegrations from "../../components/VueJsIntegrations";
@@ -15,6 +16,11 @@ const Home = () => {
   return (
     <div>
       <HeroSection />
+
+      {/* pre-defined Layout */}
+      <PredefinedLayout/>
+
+
       {/* experience section */}
       <Experience />
 
