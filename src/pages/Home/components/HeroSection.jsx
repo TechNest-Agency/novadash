@@ -11,6 +11,62 @@ const HeroSection = () => {
     { number: "600+", label: "5 ⭐ Reviews" },
   ];
 
+  // const technologies = [
+  //   {
+  //     name: "HTML",
+  //     image:
+  //       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+  //     color: "text-gray-700",
+  //   },
+  //   {
+  //     name: "Vue 3",
+  //     image:
+  //       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg",
+  //     color: "text-gray-700",
+  //   },
+  //   {
+  //     name: "NuxtJS",
+  //     image:
+  //       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nuxtjs/nuxtjs-original.svg",
+  //     color: "text-gray-700",
+  //   },
+  //   {
+  //     name: "NextJS 15",
+  //     image:
+  //       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+  //     color: "text-gray-700",
+  //   },
+  //   {
+  //     name: "Laravel",
+  //     image:
+  //       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg",
+  //     color: "text-gray-700",
+  //   },
+  //   {
+  //     name: "Vue + Laravel",
+  //     image: null, // We'll handle this specially
+  //     color: "text-gray-700",
+  //   },
+  //   {
+  //     name: ".Net Core",
+  //     image:
+  //       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg",
+  //     color: "text-gray-700",
+  //   },
+  //   {
+  //     name: "Django",
+  //     image:
+  //       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg",
+  //     color: "text-gray-700",
+  //   },
+  //   {
+  //     name: "Figma",
+  //     image:
+  //       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
+  //     color: "text-gray-700",
+  //   },
+  // ];
+
   const technologies = [
     {
       name: "HTML",
@@ -19,50 +75,63 @@ const HeroSection = () => {
       color: "text-gray-700",
     },
     {
-      name: "Vue 3",
+      name: "CSS",
       image:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
       color: "text-gray-700",
     },
     {
-      name: "NuxtJS",
+      name: "JavaScript",
       image:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nuxtjs/nuxtjs-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
       color: "text-gray-700",
     },
     {
-      name: "NextJS 15",
+      name: "Tailwind",
+      image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+      color: "text-gray-700",
+    },
+    {
+      name: "React",
+      image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+      color: "text-gray-700",
+    },
+    {
+      name: "Next JS 15",
       image:
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
-      color: "text-gray-700",
-    },
-    {
-      name: "Laravel",
-      image:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg",
-      color: "text-gray-700",
-    },
-    {
-      name: "Vue + Laravel",
-      image: null, // We'll handle this specially
-      color: "text-gray-700",
-    },
-    {
-      name: ".Net Core",
-      image:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg",
-      color: "text-gray-700",
-    },
-    {
-      name: "Django",
-      image:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg",
       color: "text-gray-700",
     },
     {
       name: "Figma",
       image:
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
+      color: "text-gray-700",
+    },
+    {
+      name: "Redux",
+      image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg",
+      color: "text-gray-700",
+    },
+    {
+      name: "TypeScript",
+      image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+      color: "text-gray-700",
+    },
+    {
+      name: "Node.js",
+      image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+      color: "text-gray-700",
+    },
+    {
+      name: "MongoDB",
+      image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
       color: "text-gray-700",
     },
   ];
@@ -136,29 +205,11 @@ const HeroSection = () => {
                 className="flex flex-col items-center space-y-2 group cursor-pointer transform transition-all duration-300 hover:scale-110"
               >
                 <div className="flex items-center justify-center w-12 h-12 group-hover:bg-gray-50 rounded-lg transition-all duration-300">
-                  {tech.name === "Vue + Laravel" ? (
-                    <div className="flex items-center space-x-1">
-                      <img
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg"
-                        alt="Vue"
-                        className="w-5 h-5"
-                      />
-                      <span className="text-gray-400 text-xs font-medium">
-                        +
-                      </span>
-                      <img
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg"
-                        alt="Laravel"
-                        className="w-5 h-5"
-                      />
-                    </div>
-                  ) : (
-                    <img
-                      src={tech.image}
-                      alt={tech.name}
-                      className="w-8 h-8 group-hover:scale-110 transition-transform duration-300"
-                    />
-                  )}
+                  <img
+                    src={tech.image}
+                    alt={tech.name}
+                    className="w-8 h-8 group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
                 <span
                   className={`text-xs sm:text-sm font-medium ${tech.color} group-hover:text-purple-600 transition-colors duration-300`}
