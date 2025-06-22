@@ -1,5 +1,6 @@
 import React from "react";
 import { Star } from "lucide-react";
+import novaDashImg from "../../../assets/images/dashboard/nova-d1.png";
 
 const HeroSection = () => {
   const stats = [
@@ -111,9 +112,9 @@ const HeroSection = () => {
           {/* Right Dashboard Preview */}
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
             <img
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=center"
+              src={novaDashImg}
               alt="Dashboard"
-              className="w-full h-auto object-contain max-w-lg"
+              className="w-full h-auto object-contain "
             />
           </div>
         </div>
