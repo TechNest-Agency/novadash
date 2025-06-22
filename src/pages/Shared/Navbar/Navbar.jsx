@@ -28,12 +28,12 @@ const Navbar = () => {
     <nav
       className={`${
         isScrolled
-          ? "bg-white/80 backdrop-blur-md border-b border-gray-100 lg:h-16"
+          ? "bg-white border-b border-gray-100 lg:h-16"
           : "bg-transparent"
       } sticky top-0 z-50 transition-all duration-300`}
     >
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 lg:absolute">
-        <div className="flex justify-between items-center h-16 ">
+      <div className="w-full lg:absolute px-7">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2 group cursor-pointer">
             <svg
@@ -137,8 +137,13 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:block">
-            <button className="bg-gradient-to-r from-[#7014F2] flex gap-1 items-center to-[#7014F2] text-white px-4 py-2.5 rounded-md font-normal  hover:from-purple-700 hover:to-pink-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-purple-500/25">
-              Buy Vuexy{" "}
+            <button
+              className="bg-gradient-to-r from-[#7014F2] to-[#7014F2] text-white px-4 py-2.5 rounded-md font-normal flex gap-1 items-center 
+  hover:from-purple-700 hover:to-pink-700 transform 
+   transition-all duration-500 ease-in-out 
+  shadow-lg hover:shadow-purple-500/25 focus:outline-none"
+            >
+              Buy NovaDash{" "}
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -150,9 +155,9 @@ const Navbar = () => {
                   <path
                     d="M16 11.0023V7.00232C16 5.94145 15.5786 4.92404 14.8284 4.17389C14.0783 3.42375 13.0609 3.00232 12 3.00232C10.9391 3.00232 9.92172 3.42375 9.17157 4.17389C8.42143 4.92404 8 5.94145 8 7.00232V11.0023M5 9.00232H19L20 21.0023H4L5 9.00232Z"
                     stroke="white"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
               </span>
@@ -187,7 +192,7 @@ const Navbar = () => {
               </a>
             ))}
             <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 mt-4">
-              Buy Vuexy 🔒
+              Buy NovaDash 🔒
             </button>
           </div>
         </div>
