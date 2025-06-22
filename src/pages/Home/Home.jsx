@@ -1,6 +1,7 @@
 import Applications from "../../components/Applications";
 import Documentation from "../../components/Documentation";
 import FrontPages from "../../components/FrontPages";
+import PredefinedLayout from "../../components/PredefinedLayout";
 import PricingSection from "../../components/PricingSection";
 import FAQSection from "../../components/FAQSection";
 import Useful from "../../components/Useful";
@@ -17,6 +18,11 @@ const Home = () => {
   return (
     <div>
       <HeroSection />
+
+      {/* pre-defined Layout */}
+      <PredefinedLayout/>
+
+
       {/* experience section */}
       <Experience />
 
