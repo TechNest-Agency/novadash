@@ -11,12 +11,8 @@ import sensearenaLogo from '../../assets/images/Logos/3rdone.png';
 import umichLogo from '../../assets/images/Logos/4thone.png';
 import betterLogo from '../../assets/images/Logos/5thone.png';
 import setterLogo from '../../assets/images/Logos/6htone.png';
-// import gcacsLogo from '../../assets/images/Logos/1stone.png';
-// import tevodLogo from '../../assets/images/Logos/1stone.png';
-// import placeholderLogo from '../../assets/images/Logos/1stone.png';
 
 const Review = () => {
-  // User avatars remain as URLs
   const userImages = [
     'https://randomuser.me/api/portraits/women/44.jpg',
     'https://randomuser.me/api/portraits/men/32.jpg',
@@ -25,7 +21,6 @@ const Review = () => {
     'https://randomuser.me/api/portraits/men/55.jpg',
   ];
 
-  // Company logos mapped to local imports
   const companyLogos = [
     { name: 'SQUIZ', logo: squizLogo },
     { name: 'University of Mississippi', logo: olemissLogo },
@@ -33,11 +28,9 @@ const Review = () => {
     { name: 'University of Michigan', logo: umichLogo },
     { name: 'Better. agency', logo: betterLogo },
     { name: 'SETTER', logo: setterLogo },
-    // { name: 'GCACS', logo: gcacsLogo },
-    // { name: 'Tevod', logo: tevodLogo }
   ];
 
-  const reviews = [
+   const reviews = [
     {
       rating: 'Excellent!',
       text: 'Clean code structure and perfectly aligned UI elements. Component-based design made integration effortless. Handoff was smooth — zero guesswork needed.',
@@ -96,6 +89,7 @@ const Review = () => {
     },
   ];
 
+
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -128,7 +122,7 @@ const Review = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 bg-gray-50 min-h-screen">
-      {/* Header Section with Logos */}
+      {/* Header Section */}
       <div className="text-center mb-8 sm:mb-12">
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-3 sm:mb-4">
           Real <span className="text-purple-500">Customers </span>Reviews
@@ -137,66 +131,58 @@ const Review = () => {
           See what our customers have to say about their experience with our products.
         </p>
         <div className="flex flex-wrap justify-center gap-6 mb-8">
-  {companyLogos.map((company, index) => (
-    <div 
-      key={index}
-      className="flex flex-col items-center group transition-all duration-300 hover:scale-105"
-    >
-      <div className="bg-white p-4 rounded-lg  hover:shadow-lg transition-shadow">
-        <img
-          src={company.logo}
-          alt={`${company.name} logo`}
-          className="h-24 w-24 sm:h-32 sm:w-32 object-contain"
-          onError={(e) => {
-            // e.currentTarget.src = placeholderLogo;
-            e.currentTarget.alt = `${company.name} logo placeholder`;
-          }}
-        />
-      </div>
-      <span className="mt-2 text-sm font-medium text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity">
-        {company.name}
-      </span>
-    </div>
-  ))}
-</div>
+          {companyLogos.map((company, index) => (
+            <div key={index} className="flex flex-col items-center">
+              <div className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow h-24 w-24 sm:h-28 sm:w-28 flex items-center justify-center">
+                <img
+                  src={company.logo}
+                  alt={`${company.name} logo`}
+                  className="max-h-16 sm:max-h-20 object-contain"
+                />
+              </div>
+              <span className="mt-2 text-xs text-gray-600 text-center max-w-[100px] truncate">
+                {company.name}
+              </span>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Divider */}
       <div className="border-t border-gray-200 my-6 sm:my-8"></div>
 
       {/* Mobile/Tablet: Grid Layout */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:hidden">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:hidden">
         {reviews.map((review, index) => (
           <div
             key={index}
-            className="bg-white p-4 sm:p-6 rounded-lg border border-gray-300 hover:shadow-lg transition-shadow text-center"
+            className="bg-white p-5 rounded-lg border border-gray-200 hover:shadow-md transition-shadow flex flex-col h-full"
           >
-            <div className="flex justify-center mb-3 sm:mb-4">
-              {[...Array(5)].map((_, i) => (
-                <FaStar key={i} className="text-yellow-400 text-sm sm:text-base" />
-              ))}
-              <span className="ml-2 font-medium text-purple-600 text-sm sm:text-base">
-                {review.rating}
-              </span>
-            </div>
-            <FaQuoteLeft className="text-gray-300 text-xl sm:text-2xl mb-3 sm:mb-4 mx-auto" />
-            <p className="text-gray-700 mb-4 sm:mb-6 text-xs sm:text-sm line-clamp-4">
-              {review.text}
-            </p>
-            <div className="flex items-center justify-center">
-              <img
-                src={review.img}
-                alt={review.name}
-                className="w-8 h-8 sm:w-10 sm:h-10 rounded-full mr-3 sm:mr-4 object-cover"
-                onError={(e) => {
-                  e.currentTarget.src = 'https://via.placeholder.com/100x100?text=User';
-                }}
-              />
-              <div className="text-left">
-                <h4 className="font-medium text-gray-800 text-sm sm:text-base">{review.name}</h4>
-                <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs sm:text-xs font-medium bg-purple-100 text-purple-800">
-                  {review.title}
+            <div className="flex-grow">
+              <div className="flex justify-center items-center mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <FaStar key={i} className="text-yellow-400 mx-0.5" />
+                ))}
+                <span className="ml-2 font-medium text-purple-600 text-sm">
+                  {review.rating}
                 </span>
+              </div>
+              <FaQuoteLeft className="text-gray-300 text-xl mb-4 mx-auto" />
+              <p className="text-gray-700 mb-5 text-sm line-clamp-4 min-h-[80px]">
+                {review.text}
+              </p>
+            </div>
+            <div className="mt-auto">
+              <div className="flex items-center justify-center">
+                <img
+                  src={review.img}
+                  alt={review.name}
+                  className="w-10 h-10 rounded-full mr-3 object-cover"
+                />
+                <div className="text-left">
+                  <h4 className="font-medium text-gray-800 text-sm">{review.name}</h4>
+                  <span className="text-xs text-purple-700">{review.title}</span>
+                </div>
               </div>
             </div>
           </div>
@@ -204,70 +190,55 @@ const Review = () => {
       </div>
 
       {/* Desktop: Slider Layout */}
-      <div className="relative overflow-hidden py-6 hidden md:block">
-        <div className="absolute inset-0 flex items-center">
-          <div className="w-full border-t border-gray-200"></div>
-        </div>
-        <div className="relative">
-          <Slider {...sliderSettings}>
-            {reviews.map((review, index) => (
-              <div key={index} className="px-2 sm:px-3 lg:px-4">
-                <div className="bg-white p-4 sm:p-6 rounded-lg border border-gray-300 hover:shadow-lg transition-shadow text-center h-full">
-                  <div className="flex justify-center mb-3 sm:mb-4">
+      <div className="hidden md:block">
+        <Slider {...sliderSettings}>
+          {reviews.map((review, index) => (
+            <div key={index} className="px-3 h-full">
+              <div className="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-shadow flex flex-col h-full">
+                <div className="flex-grow">
+                  <div className="flex justify-center items-center mb-4">
                     {[...Array(5)].map((_, i) => (
-                      <FaStar key={i} className="text-yellow-400 text-base sm:text-lg" />
+                      <FaStar key={i} className="text-yellow-400 mx-0.5" />
                     ))}
-                    <span className="ml-2 font-medium text-purple-600 text-sm sm:text-base">
+                    <span className="ml-2 font-medium text-purple-600">
                       {review.rating}
                     </span>
                   </div>
-                  <FaQuoteLeft className="text-gray-300 text-xl sm:text-2xl mb-3 sm:mb-4 mx-auto" />
-                  <p className="text-gray-700 mb-4 sm:mb-6 text-sm sm:text-base line-clamp-4">
+                  <FaQuoteLeft className="text-gray-300 text-2xl mb-5 mx-auto" />
+                  <p className="text-gray-700 mb-6 text-base line-clamp-4 min-h-[100px]">
                     {review.text}
                   </p>
+                </div>
+                <div className="mt-auto">
                   <div className="flex items-center justify-center">
                     <img
                       src={review.img}
                       alt={review.name}
-                      className="w-10 h-10 sm:w-12 sm:h-12 rounded-full mr-3 sm:mr-4 object-cover"
-                      onError={(e) => {
-                        e.currentTarget.src = 'https://via.placeholder.com/100x100?text=User';
-                      }}
+                      className="w-12 h-12 rounded-full mr-4 object-cover"
                     />
                     <div className="text-left">
-                      <h4 className="font-medium text-gray-800 text-sm sm:text-base">
-                        {review.name}
-                      </h4>
-                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
-                        {review.title}
-                      </span>
+                      <h4 className="font-medium text-gray-800">{review.name}</h4>
+                      <span className="text-sm text-purple-700">{review.title}</span>
                     </div>
                   </div>
                 </div>
               </div>
-            ))}
-          </Slider>
-        </div>
+            </div>
+          ))}
+        </Slider>
       </div>
 
-      {/* Custom CSS for invisible pagination dots */}
+      {/* Custom CSS */}
       <style jsx global>{`
-        .slick-dots {
-          bottom: -25px;
+        .slick-slide > div {
+          height: 100%;
         }
         .slick-dots li button:before {
           color: #9b59b6;
           opacity: 0.5;
-          font-size: 10px;
         }
         .slick-dots li.slick-active button:before {
           opacity: 1;
-        }
-        .line-clamp-4 {
-          display: -webkit-box;
-          -webkit-line-clamp: 4;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
         }
       `}</style>
     </div>

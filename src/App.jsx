@@ -12,7 +12,7 @@ const App = () => {
       </main>
       <Footer />
     </div>
-  );
+);
 };
 
 export default App;
