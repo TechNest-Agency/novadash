@@ -28,12 +28,12 @@ const Navbar = () => {
     <nav
       className={`${
         isScrolled
-          ? "bg-white/80 backdrop-blur-md border-b border-gray-100 lg:h-16"
+          ? "bg-white border-b border-gray-100 lg:h-16"
           : "bg-transparent"
       } sticky top-0 z-50 transition-all duration-300`}
     >
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 lg:absolute">
-        <div className="flex justify-between items-center h-16 ">
+      <div className="w-full lg:absolute px-7">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2 group cursor-pointer">
             <svg
@@ -192,7 +192,7 @@ const Navbar = () => {
               </a>
             ))}
             <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 mt-4">
-              Buy Vuexy 🔒
+              Buy NovaDash 🔒
             </button>
           </div>
         </div>

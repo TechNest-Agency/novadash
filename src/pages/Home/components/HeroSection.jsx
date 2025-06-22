@@ -1,6 +1,7 @@
 import React from "react";
 import { Star } from "lucide-react";
 import novaDashImg from "../../../assets/images/dashboard/nova-d1.png";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const stats = [
@@ -67,11 +68,11 @@ const HeroSection = () => {
   ];
 
   return (
-    <div className="relative pb-40">
+    <div className="relative lg:pb-36">
       <div className="bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50  flex items-center  justify-center p-4 sm:p-6 lg:p-8 lg:pb-32">
-        <div className="max-w-7xl w-full grid lg:pt-14 grid-cols-1 lg:grid-cols-2 lg:gap-16 items-center justify-items-center">
+        <div className=" w-full grid lg:pt-14 grid-cols-1 lg:grid-cols-2 lg:gap-16 items-center">
           {/* Left Content */}
-          <div className="space-y-10 order-2 lg:order-1 mt-5">
+          <div className="space-y-10 order-2 lg:order-1 mt-5 ">
             <div className="space-y-6">
               <h1 className="text-3xl sm:text-4xl md:text-4xl font-bold leading-tight">
                 <span className="block bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent animate-pulse">
@@ -90,7 +91,7 @@ const HeroSection = () => {
             </div>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 lg:justify-items-start lg:max-w-2xl">
               {stats.map((stat, index) => (
                 <div
                   key={index}
@@ -110,13 +111,18 @@ const HeroSection = () => {
           </div>
 
           {/* Right Dashboard Preview */}
-          <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
+          <Link
+            to="https://dashboard1-n4muj8rws-sumonrahman24s-projects.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="order-1 lg:order-2 flex justify-center lg:justify-end"
+          >
             <img
               src={novaDashImg}
               alt="Dashboard"
-              className="w-full h-auto object-contain "
+              className="w-full  h-auto  hover:border border-purple-600 object-contain transition-transform duration-300 hover:scale-105 hover:shadow-xl rounded-md"
             />
-          </div>
+          </Link>
         </div>
       </div>
 
