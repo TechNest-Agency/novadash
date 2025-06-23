@@ -5,6 +5,7 @@ import banner from "../../assets/images/banner/Screenshot 2025-06-22 110128.png"
 const Experience = () => {
   return (
     <div>
+      {/* container */}
       <div className="flex flex-col items-center justify-center bg-purple-100 min-h-screen px-4">
         <h1 className="mt-6 text-2xl sm:text-3xl md:text-4xl font-bold text-center">
           <span className="text-purple-500">11 years</span> of Experience
